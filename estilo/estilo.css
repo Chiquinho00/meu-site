@@ -1,0 +1,22 @@
+#header{
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background-color: #3c5c3d;
+}
+
+#sobremim{
+    border-radius: 2vh;
+    border: 0.2vh solid black;
+    padding: 0.3vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    margin-top: 100px;
+}
+
+#eu{
+    width: 300px;
+    display: flex;
+    align-items: end;
+    border-radius: 4vh;
+}
