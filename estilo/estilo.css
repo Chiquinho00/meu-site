@@ -1,22 +1,183 @@
-#header{
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background-color: #3c5c3d;
+:root {
+    --cor-principal: rgb(255, 51, 0);
+    --cor-secundaria: rgb(91, 192, 250);
+    --cor-fundo: rgb(255, 255, 255);
+    --cor-texto-claro: rgb(255, 255, 255);
+    --cor-texto-escuro: rgb(0, 0, 0);
+    --tamanho-font-pequeno: 16px;
+    --tamanho-font-media: 20px;
+    --tamanho-font-grande: 80px;
+    --tamanho-font-titulo: clamp(24px, 5vw, 80px);
+    --largura-botao: 200px;
+    --altura-botao: 60px;
+    --padding-botao: 10px 20px;
+    --largura-logos: 20px;
+    --largura-logo-social: 13px;
+    --altura-apresentacao: 400px;
+    --padding-apresentacao: 0.1em;
 }
 
-#sobremim{
-    border-radius: 2vh;
-    border: 0.2vh solid black;
-    padding: 0.3vh;
+body.dark-mode {
+    --cor-principal: rgb(255, 80, 40);
+    --cor-secundaria: rgb(91, 192, 250);
+    --cor-fundo: rgb(20, 20, 20);
+    --cor-texto-claro: rgb(230, 230, 230);
+    --cor-texto-escuro: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logos {
+    width: var(--largura-logos);
+}
+
+#Botão {
+    background-color: var(--cor-texto-claro);
+    border-color: var(--cor-principal);
+    padding: var(--padding-botao); 
+    color: var(--cor-texto-escuro); 
+    border-radius: 25px;
+    font-size: var(--tamanho-font-pequeno); 
+    cursor: pointer; 
+    width: var(--largura-botao); 
+    height: var(--altura-botao);
+}
+
+.Perfil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#titulo {
+    color: var(--cor-secundaria);
+    font-size: var(--tamanho-font-titulo);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#leed {
+    font-size: clamp(20px, 3vw, 25px);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-around;
+}
+
+#rodape {
+    background-color:rgb(20, 20, 20);
+    color: var(--cor-texto-claro);
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.Apresentação {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--altura-apresentacao);
+    text-align: center;
+    position: relative;
+    border-radius: 1cm;}
+
+#Bot {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    background-color: #f7f7f7;
-    margin-top: 100px;
+    padding-top: 0%;
 }
 
-#eu{
-    width: 300px;
-    display: flex;
-    align-items: end;
-    border-radius: 4vh;
+h1 {
+    font-size: var(--tamanho-font-media);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0%;
+}
+
+.logosface {
+    width:13px;
+}
+
+#apres {
+    font-size: var(--tamanho-font-media);
+    padding-top:0px;
+}
+
+#eu {
+    width: 100px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 100%;   
+    padding-left: 5%;
+}
+
+@media (max-width: 768px) {
+    #titulo {
+        font-size: clamp(24px, 8vw, 60px);
+    }
+
+    #Botão {
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rodape {
+        margin-top: 40px;
+    }
+
+    .Apresentação {
+        height: 350px;
+    }
+
+    #eu {
+        width: 150px;
+        height: 150px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #titulo {
+        font-size: clamp(20px, 10vw, 50px);
+    }
+
+    #Botão {
+        width: 140px;
+        height: 45px;
+        font-size: 12px;
+    }
+    #eu{
+        width:80px;
+    }
+    .conteudo {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .conteudo{
+        display:flex;
+        flex-direction:column-reverse;
+    }
+    #textoApre{
+        margin:0px;
+    }
 }
